@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ Copyright (C) 2011
+ Author: Praveen Venkatesh <praveenv253@gmail.com>
+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Library General Public License for more details.
+
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the
+ Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.
+
+-->
+
+<style-scheme id="vader" _name="Vader" version="1.0">
+  <author>Praveen_Venkatesh</author>
+  <_description>Vader's colour scheme</_description>
+
+  <!-- My own colour scheme for gedit - the way I like it -->
+
+  <!-- Palette -->
+  <color name="red"          value="#FF0000"/>
+  <color name="bgBraces"     value="#121830"/>
+  <color name="black"        value="#000000"/>
+  <color name="yellow"       value="#FFFF00"/>
+  <color name="commentGrey"  value="#AEAEAE"/>
+  <color name="textGrey"     value="#F8F8F8"/>
+  <color name="bgSlate"      value="#0C1021"/>
+  <color name="fgSelect"     value="#F8F8F8"/>
+  <color name="bgSelect"     value="#253B76"/>
+  <color name="fgCursor"     value="#FFFFFF"/>
+  <color name="bgCursor"     value="#112435"/>
+  <color name="fgCurrent"    value="#0080C0"/>
+  <color name="bgCurrent"    value="#1B2345"/>
+  <color name="fgMargin"     value="#EEEEEC"/>
+  <color name="bgMargin"     value="#2E3436"/>
+  <color name="fgType"       value="#FBDE2D"/>
+  <color name="fgPreproc"    value="#61CE3C"/>
+  <color name="fgError"      value="#AEAEAE"/>
+  <color name="fgString"     value="#61CE3C"/>
+  <color name="fgChar"       value="#61CE3C"/>
+  <color name="fgDocString"  value="#FF6D00"/>
+  <color name="fgKeyword"    value="#FBDE2D"/>
+  <color name="fgDecimal"    value="#D8FA3C"/>
+  <color name="fgHex"        value="#D8FA3C"/>
+  <color name="fgOctal"      value="#D8FA3C"/>
+  <color name="fgBoolean"    value="#D8FA3C"/>
+  <color name="fgFloat"      value="#D8FA3C"/>
+  <color name="fgSpecial"    value="#61CE3C"/>
+  <color name="fgImports"    value="#A400FF"/>
+  <color name="fgSpVar"      value="#30CBFF"/>
+  <color name="fgBIObject"   value="#FF0000"/>
+  <color name="fgBIConst"    value="#FF6D00"/>
+  <color name="bordeaux"     value="#A52A2A"/>
+  <color name="cyan"         value="#008A8C"/>
+  <color name="magenta"      value="#FF00FF"/>
+  <color name="aluminium4"   value="#888a85"/>    
+  <color name="blue"         value="#0000FF"/>
+  <color name="violet"       value="#6A5ACD"/>  
+  <color name="green"        value="#2E8B57"/>
+  <color name="purple"       value="#A020F0"/>
+  <color name="fgXmlTag"     value="#FF6400"/>
+  <color name="fgXmlAttr"    value="#FF6400"/>
+  <color name="fgXmlAttrVal" value="#61CE3C"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="textGrey" background="bgSlate"/>
+  <style name="selection"                   foreground="fgSelect" background="bgSelect"/>
+  <style name="cursor"                      foreground="fgCursor" background="bgCursor"/>
+  <style name="current-line"                foreground="fgCurrent" background="bgCurrent"/>
+  <style name="line-numbers"                foreground="fgMargin" background="bgMargin"/>
+  <style name="draw-spaces"                 foreground="aluminium4"/>
+
+  <!-- Bracket Matching -->
+  <style name="bracket-match"               foreground="red" background="bgSlate" bold="true"/>
+  <style name="bracket-mismatch"            foreground="black" background="red" bold="true"/>
+
+  <!-- Search Matching -->
+  <style name="search-match"                foreground="black" background="yellow"/>  
+  
+  <!-- Comments -->
+  <style name="def:comment"                 foreground="commentGrey"/>
+  <style name="def:shebang"                 foreground="commentGrey" bold="true" italic="true"/>
+  <style name="def:doc-comment-element"     italic="true"/>
+
+  <!-- Constants -->
+  <style name="def:constant"                foreground="magenta"/>
+  <style name="def:special-char"            foreground="fgSpecial"/>
+
+  <!-- Identifiers -->
+  <style name="def:keyword"                 foreground="fgKeyword"/>
+  <style name="def:identifier"              foreground="cyan"/>
+
+  <!-- Statements -->
+  <style name="def:statement"               foreground="bordeaux" bold="true"/>
+
+  <!-- Types -->
+  <style name="def:type"                    foreground="fgType" bold="true"/>
+
+  <!-- Others -->
+  <style name="def:preprocessor"            foreground="fgPreproc"/>
+  <style name="def:error"                   foreground="fgError"/>
+  <style name="def:note"                    foreground="blue" background="yellow" bold="true"/>
+  <style name="def:underlined"              italic="true" underline="true"/>
+
+  <!-- Language specific styles -->
+  <style name="c:string"                    foreground="fgString"/>
+  <style name="c:character"                 foreground="fgChar"/>
+  <style name="c:included-file"             foreground="fgPreproc"/>
+  <style name="c:decimal"                   foreground="fgDecimal"/>
+  <style name="c:hexadecimal"               foreground="fgHex"/>
+  <style name="c:octal"                     foreground="fgOctal"/>
+  <style name="c:boolean"                   foreground="fgBoolean"/>
+  <style name="c:floating-point"            foreground="fgFloat"/>
+  
+  <style name="python:string"               foreground="fgString"/>
+  <style name="python:multiline-string"     foreground="fgDocString"/>
+  <style name="python:module-handler"       foreground="fgImports"/>
+  <style name="python:special-variable"     foreground="fgSpVar"/>
+  <style name="python:builtin-function"     foreground="fgSpVar"/>
+  <style name="python:builtin-object"       foreground="fgBIObject"/>
+  <style name="python:builtin-constant"     foreground="fgBIConst"/>
+  <style name="python:decimal"              foreground="fgBoolean"/>
+  <style name="python:floating-point"       foreground="fgBoolean"/>
+  <style name="python:base-n-integer"       foreground="fgBoolean"/>
+  <style name="python:boolean"              foreground="fgBoolean"/>
+  <style name="python:keyword"              foreground="fgKeyword" bold="true"/>
+  <style name="diff:added-line"             foreground="#008B8B"/>
+  <style name="diff:removed-line"           foreground="#6A5ACD"/>
+  <style name="diff:changed-line"           use-style="def:preprocessor"/>
+  <style name="diff:special-case"           use-style="def:constant"/>
+  <style name="diff:location"               use-style="def:statement"/>
+  <style name="diff:diff-file"              use-style="def:type"/>
+
+  <style name="xml:tags"                    foreground="fgXmlTag"/>
+  <style name="xml:attribute-name"          foreground="fgXmlAttr"/>
+  <style name="xml:attribute-value"         foreground="fgXmlAttrVal"/>
+  <style name="xml:namespace"               foreground="green" bold="true"/>
+
+  <style name="js:object"                   foreground="#2E8B57" bold="true"/>
+  <style name="js:constructors"             foreground="#008B8B"/>
+
+  <style name="latex:display-math"          foreground="#6A5ACD"/>
+  <style name="latex:command"               foreground="#2E8B57" bold="true"/>
+  <style name="latex:include"               use-style="def:preprocessor"/>
+
+  <style name="sh:variable"                 foreground="#6A5ACD"/>
+
+  <!-- legacy styles for old lang files -->
+  <style name="Others"                      foreground="#2E8B57" bold="true"/>
+  <style name="Others 2"                    foreground="#008B8B"/>
+  <style name="Others 3"                    foreground="#6A5ACD"/>
+
+</style-scheme>
