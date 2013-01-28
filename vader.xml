@@ -93,7 +93,7 @@
   <style name="def:doc-comment-element"     italic="true"/>
 
   <!-- Constants -->
-  <style name="def:constant"                foreground="magenta"/>
+  <style name="def:constant"                foreground="fgBoolean"/>
   <style name="def:special-char"            foreground="fgSpecial"/>
 
   <!-- Identifiers -->
@@ -134,6 +134,17 @@
   <style name="python:base-n-integer"       foreground="fgBoolean"/>
   <style name="python:boolean"              foreground="fgBoolean"/>
   <style name="python:keyword"              foreground="fgKeyword" bold="true"/>
+
+  <style name="cuda:decimal"                foreground="fgDecimal"/>
+  <style name="cuda:hexadecimal"            foreground="fgHex"/>
+  <style name="cuda:octal"                  foreground="fgOctal"/>
+  <style name="cuda:boolean"                foreground="fgBoolean"/>
+  <style name="cuda:floating-point"         foreground="fgFloat"/>
+  <style name="cuda:cuda-global"            foreground="fgSpVar"/>
+  <style name="cuda:cuda-device"            foreground="fgSpVar"/>
+  <style name="cuda:global-var"             foreground="fgBIConst"/>
+  <style name="cuda:kernel-call"            foreground="fgImports"/>
+
   <style name="diff:added-line"             foreground="#008B8B"/>
   <style name="diff:removed-line"           foreground="#6A5ACD"/>
   <style name="diff:changed-line"           use-style="def:preprocessor"/>
