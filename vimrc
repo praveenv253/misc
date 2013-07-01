@@ -38,6 +38,10 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> <Up> gk
 nnoremap <silent> <Down> gj
+inoremap <silent> <C-o>k <C-o>gk
+inoremap <silent> <C-o>j <C-o>gj
+inoremap <silent> <Up> <C-o>gk
+inoremap <silent> <Down> <C-o>gj
 
 "For when you forget to open a file with sudo"
 map <Leader>ww :w !sudo tee % >/dev/null<CR>
