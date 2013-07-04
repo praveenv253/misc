@@ -14,6 +14,15 @@ set hlsearch
 set ignorecase
 "...but only ignore if the search string is all lowercase"
 set smartcase
+"Always keep status bar on"
+set laststatus=2
+"Set encoding to utf-8"
+set encoding=utf-8
+"Enable characters to demarcate the kind of whitespace used"
+set listchars=extends:»,precedes:«,tab:·\ ,trail:◀ ",eol:¬
+set list
+"Use 16 colours in the terminal"
+set t_Co=16
 
 "Invoke pathogen for plugins"
 execute pathogen#infect()
@@ -68,11 +77,13 @@ vnoremap <silent> < <gv
 
 "For moving tabs left and right"
 "Use Alt+PgUp for left and Alt+PgDn for right"
-nnoremap <silent> [5;3~ :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> [6;3~ :execute 'silent! tabmove ' . tabpagenr()<CR>
-inoremap <silent> [5;3~ 
+nnoremap <silent> [5;3~
+			\ :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> [6;3~
+			\ :execute 'silent! tabmove ' . tabpagenr()<CR>
+inoremap <silent> [5;3~
 			\ <ESC>:execute 'silent! tabmove ' . (tabpagenr()-2)<CR>a
-inoremap <silent> [6;3~ 
+inoremap <silent> [6;3~
 			\ <ESC>:execute 'silent! tabmove ' . tabpagenr()<CR>a
 
 "For switching paste mode on/off during insert"
