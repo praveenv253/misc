@@ -1,3 +1,6 @@
+"Invoke pathogen for plugins"
+execute pathogen#infect()
+
 "Line numbers"
 set number
 "Tell me the name of the file I'm editing"
@@ -23,9 +26,9 @@ set listchars=extends:»,precedes:«,tab:·\ ,trail:◀ ",eol:¬
 set list
 "Use 16 colours in the terminal"
 set t_Co=16
+"Use fancy symbols in powerline"
+let g:Powerline_symbols = "fancy"
 
-"Invoke pathogen for plugins"
-execute pathogen#infect()
 "Switch on syntax highlighting"
 syntax on
 "Detect filetype automatically and indent depending upon filetype"
@@ -34,13 +37,6 @@ filetype plugin indent on
 ": is too painful to press"
 nnoremap <Space> :
 vnoremap <Space> :
-
-"For those irritating typos (when I'm still using :)"
-command W w
-command WQ wq
-command Q q
-command Wq wq
-command Tabe tabe
 
 "For moving up and down through wrapped lines"
 nnoremap <silent> k gk
