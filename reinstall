@@ -1,0 +1,34 @@
+# Programs that are a must-install when reinstalling my computer:
+
+g++
+ipython  # With ipython config. loggrep for this.
+git
+vim
+	pathogen
+	nerdtree
+	vim-nerdtree-tabs
+	nerdcommenter
+	gundo
+	vim-fugitive
+	vim-powerline (along with fontpatching)
+	upAndDown.vim (from own repo)
+	after/ftplugin for html and python
+python-numpy
+python-scipy
+python-matplotlib
+artha
+valgrind
+trash-cli	# Install from source (github). As of now, apt-get is very stale.
+
+gimp
+stellarium
+vlc
+
+openssh-server
+apache
+mysql-server
+php5
+phpmyadmin
+
+subversion
+mercurial
