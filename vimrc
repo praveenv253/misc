@@ -22,12 +22,14 @@ set laststatus=2
 "Set encoding to utf-8"
 set encoding=utf-8
 "Enable characters to demarcate the kind of whitespace used"
-set listchars=extends:»,precedes:«,tab:·\ ,trail:◀ ",eol:¬
+set listchars=extends:»,precedes:«,tab:·\ ,trail:◀
 set list
 "Use 16 colours in the terminal"
 set t_Co=16
 "Use fancy symbols in powerline"
 let g:Powerline_symbols = "fancy"
+"Ignore some file endings while expanding"
+set wildignore=*.o,*~,*.pyc,.git
 
 "Switch on syntax highlighting"
 syntax on
