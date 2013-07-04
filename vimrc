@@ -91,3 +91,6 @@ set pastetoggle=<F2>
 "For exceeding 80 characters in a line"
 highlight ColorColumn ctermbg=7
 set colorcolumn=80
+
+"For setting the search match colour appropriately"
+highlight Search ctermbg=011 ctermfg=000
