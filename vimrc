@@ -89,7 +89,7 @@ inoremap <silent> [6;3~
 set pastetoggle=<F2>
 
 "For exceeding 80 characters in a line"
-highlight ColorColumn ctermbg=7
+highlight ColorColumn ctermbg=005
 set colorcolumn=80
 
 "For setting the search match colour appropriately"
