@@ -50,6 +50,10 @@ inoremap <silent> <C-o>j <C-o>gj
 inoremap <silent> <Up> <C-o>gk
 inoremap <silent> <Down> <C-o>gj
 
+"Make Ctrl+Left and Ctrl+Right move through words"
+nnoremap <silent> <C-Left> b
+nnoremap <silent> <C-Right> w
+
 "For when you forget to open a file with sudo"
 map <Leader>ww :w !sudo tee % >/dev/null<CR>
 
