@@ -134,8 +134,8 @@ def _add():
 def _edit(args):
     tasks = _read_tasks()
     try:
-        task_num = int(args[2])
-    except ValueError:
+        task_num = int(args[2]) - 1
+    except (ValueError, IndexError):
         _param_error()
     try:
         task = tasks[task_num]
@@ -147,6 +147,7 @@ def _edit(args):
         temp.write(task)
         temp.flush()
         call([EDITOR, temp.name])
+        temp.seek(0)
         tasks[task_num] = temp.read()
 
     _write_tasks(tasks)
@@ -164,8 +165,8 @@ def _clear():
 def _remove(args):
     tasks = _read_tasks()
     try:
-        task_num = int(args[2])
-    except ValueError:
+        task_num = int(args[2]) - 1
+    except (ValueError, IndexError):
         _param_error()
     try:
         task = tasks[task_num]
