@@ -30,6 +30,8 @@ set t_Co=16
 let g:Powerline_symbols = "fancy"
 "Ignore some file endings while expanding"
 set wildignore=*.o,*~,*.pyc,.git
+"New vertical windows appear on the right of the existing window"
+set splitright
 
 "Switch on syntax highlighting"
 syntax on
@@ -55,7 +57,7 @@ nnoremap <silent> <C-Left> b
 nnoremap <silent> <C-Right> w
 
 "For when you forget to open a file with sudo"
-map <Leader>ww :w !sudo tee % >/dev/null<CR>
+noremap <Leader>ww :w !sudo tee % >/dev/null<CR>
 
 "For toggling the NERDTree window on and off"
 map <Leader>] <plug>NERDTreeTabsToggle<CR>
@@ -70,8 +72,8 @@ nmap t :tabe
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
 "For centering the screen on the search-find"
-map n nzz
-map N Nzz
+nnoremap n nzz
+nnoremap N Nzz
 
 "For keeping the selection on after indenting/un-indenting in visual mode"
 vnoremap <silent> > >gv
@@ -87,6 +89,14 @@ inoremap <silent> [5;3~
 			\ <ESC>:execute 'silent! tabmove ' . (tabpagenr()-2)<CR>a
 inoremap <silent> [6;3~
 			\ <ESC>:execute 'silent! tabmove ' . tabpagenr()<CR>a
+
+"For converting long constants into upper case quickly (after typing them)"
+inoremap <C-u> <Esc>viwUea
+
+"For opening vimrc quickly"
+nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+"For loading vimrc changes quickly"
+nnoremap <Leader>sv :source $MYVIMRC<CR>
 
 "For switching paste mode on/off during insert"
 "Otherwise, indents will cascade"
