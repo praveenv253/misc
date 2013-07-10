@@ -98,6 +98,16 @@ nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 "For loading vimrc changes quickly"
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
+"For moving up and down faster, but not as fast as PgUp and PgDn"
+nnoremap <C-Up> kkk
+nnoremap <C-Down> jjj
+
+"For there are things faster than <C-w>w"
+nnoremap <C-w><C-Left>  <C-w><Left>
+nnoremap <C-w><C-Right> <C-w><Right>
+nnoremap <C-w><C-Up>    <C-w><Up>
+nnoremap <C-w><C-Down>  <C-w><Down>
+
 "For switching paste mode on/off during insert"
 "Otherwise, indents will cascade"
 set pastetoggle=<F2>
