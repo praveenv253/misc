@@ -3,6 +3,11 @@ Misc
 
 A tiny repository containing a bunch of scripts, configuration files and programs maybe.
 
+vimrc
+-----
+
+Personal .vimrc file. Has a number of useful and frequently used mappings. Many of these are plugin-based. Still adding to this frequently.
+
 vader.xml
 ---------
 
