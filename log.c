@@ -3,8 +3,8 @@
 #include <time.h>
 #include <string.h>
 
-#define LOGFILE "/home/praveen/Documents/.logfile"
-#define TEMPLOGFILE "/home/praveen/Documents/.logfile~"
+#define LOGFILE "/home/praveen/Documents/.logs/logfile"
+#define TEMPLOGFILE "/home/praveen/Documents/.logs/logfile~"
 
 void display(void);
 void writelog(int, char **);
