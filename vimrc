@@ -93,6 +93,9 @@ inoremap <silent> [6;3~
 "For converting long constants into upper case quickly (after typing them)"
 inoremap <C-u> <Esc>viwUea
 
+"For clearing a line without deleting it in normal mode"
+nnoremap ds O<Esc>jddk
+
 "For opening vimrc quickly"
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 "For loading vimrc changes quickly"
