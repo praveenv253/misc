@@ -26,8 +26,8 @@ def _help():
         l -l --list
             List all tasks in the taskfile.
         a -a --add
-            Add a new task to the taskfile. Expects an additional command line
-            parameter: the raw text of the task to be added.
+            Add a new task to the taskfile. Opens up $EDITOR or vim for
+            editing.
         e -e --edit
             Edit an existing task. Expects an additional parameter: the task
             number to edit. Use --list to locate tasks to edit.
