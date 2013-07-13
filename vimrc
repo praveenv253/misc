@@ -32,6 +32,9 @@ let g:Powerline_symbols = "fancy"
 set wildignore=*.o,*~,*.pyc,.git
 "New vertical windows appear on the right of the existing window"
 set splitright
+"Set timeout values for mappings and keycodes"
+set timeoutlen=500
+set ttimeoutlen=100
 
 "Switch on syntax highlighting"
 syntax on
