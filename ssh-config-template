@@ -1,0 +1,9 @@
+Host example
+  Hostname example.com
+  IdentityFile ~/.ssh/id_rsa
+  user example
+  Port 22
+  ForwardAgent yes
+  ForwardX11Trusted yes
+  TCPKeepAlive yes
+
