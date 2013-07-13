@@ -111,6 +111,8 @@ nnoremap <C-Down> jjj
 "For moving the screen, but not the cursor..."
 nnoremap <S-Up> <C-y>
 nnoremap <S-Down> <C-e>
+inoremap <S-Up> <C-o><C-y>
+inoremap <S-Down> <C-o><C-e>
 
 "For there are things faster than <C-w>w"
 nnoremap <C-w><C-Left>  <C-w><Left>
