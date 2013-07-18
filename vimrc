@@ -68,6 +68,9 @@ map <Leader>] <plug>NERDTreeTabsToggle<CR>
 "For toggling the Gundo window on and off"
 map <Leader>[ :GundoToggle<CR>
 
+"For toggling the taglist window on and off"
+map <Leader><CR> :TlistToggle<CR>
+
 "For opening a new file quickly in a new tab from normal mode"
 nmap t :tabe 
 
@@ -105,8 +108,12 @@ nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
 "For moving up and down faster, but not as fast as PgUp and PgDn"
-nnoremap <C-Up> kkk
-nnoremap <C-Down> jjj
+nnoremap <C-Up> 3k
+nnoremap <C-Down> 3j
+inoremap <C-Up> <C-o>3k
+inoremap <C-Down> <C-o>3j
+vnoremap <C-Up> 3k
+vnoremap <C-Down> 3j
 
 "For moving the screen, but not the cursor..."
 nnoremap <S-Up> <C-y>
