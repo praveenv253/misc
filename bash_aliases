@@ -1,9 +1,9 @@
 # Search for files, and search file contents, with regex
-alias sff='find . | grep -v "\.git" | grep -v ".*\.svn-base$" | grep --color=always -e'
-alias sfc='find . | grep -v "\.git" | grep -v ".*\.svn-base$" | xargs grep --color=always -H -e'
+alias sff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | grep -z --color=always -e'
+alias sfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 grep --color=always -H -e'
 # Search for files, and search file contents, raw string
-alias fsff='find . | grep -v "\.git" | grep -v ".*\.svn-base$" | fgrep --color=always'
-alias fsfc='find . | grep -v "\.git" | grep -v ".*\.svn-base$" | xargs fgrep --color=always -H'
+alias fsff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | fgrep -z --color=always'
+alias fsfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 fgrep --color=always -H'
 
 # Convenience shortcuts
 alias die='sudo shutdown -h now'
