@@ -45,6 +45,9 @@ filetype plugin indent on
 nnoremap <Space> :
 vnoremap <Space> :
 
+"To give backspace a more useful purpose"
+nnoremap <Backspace> i<Backspace><Esc>l
+
 "For moving up and down through wrapped lines"
 nnoremap <silent> k gk
 nnoremap <silent> j gj
