@@ -26,6 +26,7 @@ alias vim='vim -p'
 alias vi='vim'
 alias mkdir='mkdir -p'
 alias tp='trash-put'	# Requires installation of trash-cli
+alias j='jobs -pl'
 
 # Safety nets
 alias mv='mv -i'
