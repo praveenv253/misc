@@ -35,6 +35,10 @@ set splitright
 "Set timeout values for mappings and keycodes"
 set timeoutlen=500
 set ttimeoutlen=100
+"Set foldmethod to fold all lines of the same or higher indent level..."
+set foldmethod=indent
+"... but keep it turned off at startup"
+set nofoldenable
 
 "Switch on syntax highlighting"
 syntax on
