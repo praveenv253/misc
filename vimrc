@@ -58,6 +58,10 @@ nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> <Up> gk
 nnoremap <silent> <Down> gj
+vnoremap <silent> k gk
+vnoremap <silent> j gj
+vnoremap <silent> <Up> gk
+vnoremap <silent> <Down> gj
 inoremap <silent> <C-o>k <C-o>gk
 inoremap <silent> <C-o>j <C-o>gj
 inoremap <silent> <Up> <C-o>gk
