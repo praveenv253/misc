@@ -4,6 +4,8 @@ g++
 ipython  # With ipython config. loggrep for this.
 git
 vim
+	vim-gnome	# This is for the gnome2 desktop environment. Ubuntu will
+				# already have the dependencies installed.
 	pathogen
 	nerdtree
 	vim-nerdtree-tabs
