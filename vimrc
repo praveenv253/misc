@@ -49,9 +49,9 @@ vnoremap <Space> :
 nnoremap <Backspace> i<Backspace><Esc>l
 
 "For copying and pasting text through the system clipboard"
-vnoremap <Leader>y "+y
-nnoremap <Leader>p "+p
-nnoremap <Leader>P "+P
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>P "+P
 
 "For moving up and down through wrapped lines"
 nnoremap <silent> k gk
