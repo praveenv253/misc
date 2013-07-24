@@ -48,6 +48,11 @@ vnoremap <Space> :
 "To give backspace a more useful purpose"
 nnoremap <Backspace> i<Backspace><Esc>l
 
+"For copying and pasting text through the system clipboard"
+vnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+
 "For moving up and down through wrapped lines"
 nnoremap <silent> k gk
 nnoremap <silent> j gj
