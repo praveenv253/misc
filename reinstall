@@ -21,6 +21,7 @@ python-matplotlib
 artha
 valgrind
 trash-cli	# Install from source (github). As of now, apt-get is very stale.
+lyx
 
 gimp
 stellarium
