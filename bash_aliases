@@ -1,8 +1,8 @@
 # Search for files, and search file contents, with regex
-alias sff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | grep -z --color=always -e'
+#alias sff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | grep -z --color=always -e'
 alias sfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 grep --color=always -H -e'
 # Search for files, and search file contents, raw string
-alias fsff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | fgrep -z --color=always'
+#alias fsff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | fgrep -z --color=always'
 alias fsfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 fgrep --color=always -H'
 
 # Convenience shortcuts
