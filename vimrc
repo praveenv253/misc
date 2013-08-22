@@ -147,6 +147,12 @@ nnoremap <C-w><C-Down>  <C-w><Down>
 "Otherwise, indents will cascade"
 set pastetoggle=<F2>
 
+"For autoformatting a file using astyle"
+nnoremap <Leader>fc
+			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-paren-in
+			\           --pad-oper --unpad-paren --break-blocks
+			\           --align-pointer=name<CR>
+
 "For exceeding 80 characters in a line"
 highlight ColorColumn ctermbg=005
 set colorcolumn=80
