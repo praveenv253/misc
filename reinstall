@@ -18,10 +18,15 @@ vim
 python-numpy
 python-scipy
 python-matplotlib
+python-pip
+	pep8
+	autopep8
 artha
 valgrind
 trash-cli	# Install from source (github). As of now, apt-get is very stale.
 lyx
+astyle		# Formatting C and C++ code.
+par			# Formatting text paragraphs and comments.
 
 gimp
 stellarium
