@@ -10,7 +10,7 @@ alias die='sudo shutdown -h now'
 alias phoenix='sudo shutdown -r now'
 alias back='cd -'
 alias n='nautilus .'
-alias g='gvim'
+#alias g='gvim'
 alias du='du -h'
 alias cd..='cd ..'
 # No more ssh aliases once you know ssh_config
