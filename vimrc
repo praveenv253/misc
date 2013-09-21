@@ -149,9 +149,8 @@ set pastetoggle=<F2>
 
 "For autoformatting a file using astyle"
 nnoremap <Leader>fc
-			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-paren-in
-			\           --pad-oper --unpad-paren --break-blocks
-			\           --align-pointer=name<CR>
+			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-oper
+			\           --unpad-paren --break-blocks --align-pointer=name<CR>
 
 "For exceeding 80 characters in a line"
 highlight ColorColumn ctermbg=005
@@ -159,3 +158,7 @@ set colorcolumn=80
 
 "For setting the search match colour appropriately"
 highlight Search ctermbg=011 ctermfg=000
+
+"For inverting colours on selection"
+highlight clear Visual
+highlight Visual cterm=reverse
