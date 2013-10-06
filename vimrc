@@ -152,6 +152,13 @@ nnoremap <Leader>fc
 			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-oper
 			\           --unpad-paren --break-blocks --align-pointer=name<CR>
 
+"For autoformatting a file using par with a width of 79 characters"
+set formatprg="par 79"
+"For formatting the whole document"
+nnoremap <Leader>fa ggVGgq
+"For formatting the current paragraph"
+nnoremap <Leader>fp vapgq
+
 "For exceeding 80 characters in a line"
 highlight ColorColumn ctermbg=005
 set colorcolumn=80
