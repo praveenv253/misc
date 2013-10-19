@@ -157,7 +157,7 @@ set formatprg="par 79"
 "For formatting the whole document"
 nnoremap <Leader>fa ggVGgq
 "For formatting the current paragraph"
-nnoremap <Leader>fp vapgq
+nnoremap <Leader>fp mzvapgq`z
 
 "For exceeding 80 characters in a line"
 highlight ColorColumn ctermbg=005
