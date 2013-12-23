@@ -27,6 +27,7 @@ alias vi='vim'
 alias mkdir='mkdir -p'
 alias tp='trash-put'	# Requires installation of trash-cli
 alias j='jobs -pl'
+alias gitl='gitk --all'		# Requires git and gitk
 
 # Safety nets
 alias mv='mv -i'
