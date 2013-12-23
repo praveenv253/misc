@@ -159,6 +159,12 @@ nnoremap <Leader>fa ggVGgq
 "For formatting the current paragraph"
 nnoremap <Leader>fp mzvapgq`z
 
+"For spellcheck"
+nnoremap <Leader>ss
+			\ :setlocal spell spelllang=en_gb<CR>
+nnoremap <Leader>sa
+			\ :setlocal nospell<CR>
+
 "For exceeding 80 characters in a line"
 highlight ColorColumn ctermbg=005
 set colorcolumn=80
