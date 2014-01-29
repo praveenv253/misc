@@ -150,7 +150,8 @@ set pastetoggle=<F2>
 "For autoformatting a file using astyle"
 nnoremap <Leader>fc
 			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-oper
-			\           --unpad-paren --break-blocks --align-pointer=name<CR>
+			\           --unpad-paren --delete-empty-lines --align-pointer=name
+			\           --break-blocks<CR>
 
 "For autoformatting a file using par with a width of 79 characters"
 set formatprg="par 79"
