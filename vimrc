@@ -124,6 +124,10 @@ nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
 "For moving up and down faster, but not as fast as PgUp and PgDn"
+nnoremap <C-k> 3k
+nnoremap <C-j> 3j
+vnoremap <C-k> 3k
+vnoremap <C-j> 3j
 nnoremap <C-Up> 3k
 nnoremap <C-Down> 3j
 inoremap <C-Up> <C-o>3k
