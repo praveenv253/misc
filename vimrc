@@ -123,6 +123,10 @@ nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 "For loading vimrc changes quickly"
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
+"For preventing an incomplete comment from deleting text"
+nnoremap <Leader>c <Nop>
+vnoremap <Leader>c <Nop>
+
 "For moving up and down faster, but not as fast as PgUp and PgDn"
 nnoremap <C-k> 3k
 nnoremap <C-j> 3j
