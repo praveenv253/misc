@@ -42,6 +42,7 @@ set nofoldenable
 
 "Switch on syntax highlighting"
 syntax on
+colorscheme vader
 "Detect filetype automatically and indent depending upon filetype"
 filetype plugin indent on
 
@@ -155,6 +156,15 @@ nnoremap <C-w><C-Down>  <C-w><Down>
 "Otherwise, indents will cascade"
 set pastetoggle=<F2>
 
+"For figuring out the highlight group under the cursor"
+map <Leader>h
+			\ :echo
+			\ "hi<" . synIDattr(synID(line("."),col("."),1),"name") . "> " .
+			\ "trans<" . synIDattr(synID(line("."),col("."),0),"name") . "> " .
+			\ "lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
+			\       . ">"
+			\ <CR>
+
 "For autoformatting a file using astyle"
 nnoremap <Leader>fc
 			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-oper
@@ -175,7 +185,6 @@ nnoremap <Leader>sa
 			\ :setlocal nospell<CR>
 
 "For exceeding 80 characters in a line"
-highlight ColorColumn ctermbg=005
 set colorcolumn=80
 
 "For setting the search match colour appropriately"
