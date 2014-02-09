@@ -6,22 +6,22 @@ endif
 
 let g:colors_name = "vader"
 
-hi Normal                ctermfg=252
-hi Comment               ctermfg=244
-hi String                ctermfg=076
-hi Number                ctermfg=196
-hi Constant              ctermfg=208
-hi Special               ctermfg=191
-hi Identifier            ctermfg=012
-hi Statement  cterm=bold ctermfg=214
-hi PreProc               ctermfg=135
-hi Type       cterm=bold ctermfg=011
-hi Function              ctermfg=039
-hi Operator              ctermfg=026
-hi Ignore                ctermfg=008
-hi Error                 ctermfg=124
-hi Todo                  ctermfg=000 ctermbg=011
-hi MatchParen cterm=bold ctermfg=160 ctermbg=none
+hi Normal                           ctermfg=252
+hi Comment                          ctermfg=244
+hi String                           ctermfg=076
+hi Number                           ctermfg=196
+hi Constant                         ctermfg=208
+hi Special                          ctermfg=191
+hi Identifier            cterm=none ctermfg=011
+hi Statement             cterm=bold ctermfg=214
+hi PreProc                          ctermfg=135
+hi Type                  cterm=bold ctermfg=011
+hi Function                         ctermfg=039
+hi Operator                         ctermfg=026
+hi Ignore                           ctermfg=008
+hi Error                            ctermfg=124
+hi Todo                             ctermfg=000 ctermbg=011
+hi MatchParen            cterm=bold ctermfg=160 ctermbg=none
 
 " Common groups that link to default highlighting.
 " You can specify other highlighting easily.
@@ -49,11 +49,24 @@ hi link SpecialComment   Special
 hi link Debug            Special
 hi link Operator         Operator
 
-" C-specific syntax highlighting.
-hi cCustomClass ctermfg=030
+" C-specific
+hi cCustomClass          ctermfg=030
 
 " Python-specific
-hi pythonExceptions cterm=bold ctermfg=160
+hi pythonExceptions      cterm=bold ctermfg=160
+
+" Make-specific
+hi link makeTarget       Statement
+hi link makeIdent        Type
+hi link makeCommands     String
+
+" Vim-specific
+hi link VimGroup         Identifier
+hi link VimHiGroup       Identifier
+hi link VimHiCterm       String
+hi link VimHiCtermFgBg   String
+hi link VimHiAttrib      Number
+hi link VimOption        Identifier
 
 " Miscellaneous
 hi LineNr                ctermfg=238
