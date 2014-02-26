@@ -39,6 +39,8 @@ set ttimeoutlen=100
 set foldmethod=indent
 "... but keep it turned off at startup"
 set nofoldenable
+"Set modeline, particularly for syntax-highlighting certain files correctly"
+set modeline
 
 "Switch on syntax highlighting"
 syntax on

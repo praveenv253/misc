@@ -1,3 +1,5 @@
+# vim: set filetype=sh :
+
 # Search for files, and search file contents, with regex
 #alias sff='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | grep -z --color=always -e'
 alias sfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 grep --color=always -H -e'
