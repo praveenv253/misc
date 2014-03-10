@@ -1,9 +1,0 @@
-#!/bin/bash
-
-find . -print0 | \
-	grep -zZ -v "\.git" | \
-	grep -zZ -v ".*\.svn-base$" | \
-	grep -z --color=always -e $@ | \
-	tr "\000" "\n" | \
-	less -RFX
-
