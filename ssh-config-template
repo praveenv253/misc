@@ -1,3 +1,5 @@
+# vim: set filetype=sshconfig :
+
 Host example
   Hostname example.com
   IdentityFile ~/.ssh/id_rsa
