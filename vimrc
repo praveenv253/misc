@@ -41,6 +41,8 @@ set foldmethod=indent
 set nofoldenable
 "Set modeline, particularly for syntax-highlighting certain files correctly"
 set modeline
+"Treat all sh files as bash scripts for syntax highlighting"
+let g:is_bash = 1
 
 "Switch on syntax highlighting"
 syntax on
