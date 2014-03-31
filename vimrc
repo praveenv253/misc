@@ -169,11 +169,13 @@ map <Leader>h
 			\       . ">"
 			\ <CR>
 
-"For autoformatting a file using astyle"
+"For autoformatting a C/C++ file using astyle"
 nnoremap <Leader>fc
 			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-oper
 			\           --unpad-paren --delete-empty-lines --align-pointer=name
 			\           --break-blocks<CR>
+"For autoformatting a python file using autopep8"
+nnoremap <Leader>fy :%!autopep8 -<CR>
 
 "For autoformatting a file using par with a width of 79 characters"
 set formatprg="par 79"
@@ -181,6 +183,9 @@ set formatprg="par 79"
 nnoremap <Leader>fa ggVGgq
 "For formatting the current paragraph"
 nnoremap <Leader>fp mzvapgq`z
+
+"For removing trailing spaces"
+nnoremap <Leader>fs :%s/\s\+$//g<CR>
 
 "For spellcheck"
 nnoremap <Leader>ss
