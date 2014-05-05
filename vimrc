@@ -121,7 +121,8 @@ inoremap <silent> [6;3~
 inoremap <C-u> <Esc>viwUea
 
 "For clearing a line without deleting it in normal mode"
-nnoremap ds 0v$hx
+"- The escape helps exit visual mode when the line is already empty"
+nnoremap ds 0v$hx<Esc>
 
 "For opening vimrc quickly"
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
