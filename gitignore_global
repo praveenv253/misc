@@ -1,0 +1,5 @@
+# Ignore vim's swap files.
+*.swp
+
+# Ignore tag files created by ctags
+tags

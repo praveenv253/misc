@@ -1,0 +1,9 @@
+[user]
+	name = Praveen Venkatesh
+	email = praveenv253@gmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	pager = less -x5,9
+	excludesfile = /home/praveen/.gitignore_global
