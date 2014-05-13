@@ -1,0 +1,12 @@
+[Desktop Entry]
+	Encoding=UTF-8
+	Name=TVim
+	Comment=Edit files using vim in a terminal
+	Exec=/home/praveen/bin/tvim
+	Terminal=false
+	Type=Application
+	Icon=/usr/share/pixmaps/vim.svg
+	Categories=Application;Utility;TextEditor;
+	StartupNotify=true
+	MimeType=text/plain;
+	NoDisplay=true
