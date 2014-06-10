@@ -55,7 +55,7 @@ nnoremap <Space> :
 vnoremap <Space> :
 
 "To give backspace a more useful purpose"
-nnoremap <Backspace> i<Backspace><Esc>l
+nnoremap <Backspace> i<Backspace><C-o>:stopinsert<CR>
 
 "For copying and pasting text through the system clipboard"
 noremap <Leader>y "+y
