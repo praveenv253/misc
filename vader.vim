@@ -60,6 +60,21 @@ hi link makeTarget       Statement
 hi link makeIdent        Type
 hi link makeCommands     String
 
+" Tex-specific
+hi link texSection       Statement
+hi link texStatement     Type
+hi link texTypeStyle     Type
+hi link texDelimiter     Operator
+hi link texRefZone       String
+hi link texSectionName   String
+hi link texInputFile     String
+hi link texMathZoneX     String
+hi link texMathZoneY     String
+hi link texMathSymbol    Special
+hi link texSubscript     Special
+hi link texSuperscript   Special
+hi link texZone          Function
+
 " Vim-specific
 hi link VimGroup         Identifier
 hi link VimHiGroup       Identifier
