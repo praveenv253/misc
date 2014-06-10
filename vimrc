@@ -55,7 +55,7 @@ nnoremap <Space> :
 vnoremap <Space> :
 
 "To give backspace a more useful purpose"
-nnoremap <Backspace> i<Backspace><C-o>:stopinsert<CR>
+nnoremap <silent> <Backspace> i<Backspace><C-o>:stopinsert<CR>
 
 "For copying and pasting text through the system clipboard"
 noremap <Leader>y "+y
@@ -87,10 +87,10 @@ noremap <Leader>ww :w !sudo tee % >/dev/null<CR>
 map <Leader>] <plug>NERDTreeTabsToggle<CR>
 
 "For toggling the Gundo window on and off"
-map <Leader>[ :GundoToggle<CR>
+map <silent> <Leader>[ :GundoToggle<CR>
 
 "For toggling the taglist window on and off"
-map <Leader><CR> :TlistToggle<CR>
+map <silent> <Leader><CR> :TlistToggle<CR>
 
 "For opening a new file quickly in a new tab from normal mode"
 nmap t :tabe 
@@ -171,12 +171,12 @@ map <Leader>h
 			\ <CR>
 
 "For autoformatting a C/C++ file using astyle"
-nnoremap <Leader>fc
+nnoremap <silent> <Leader>fc
 			\ :%!astyle --mode=c --style=k/r --indent=tab --pad-oper
 			\           --unpad-paren --delete-empty-lines --align-pointer=name
 			\           --break-blocks<CR>
 "For autoformatting a python file using autopep8"
-nnoremap <Leader>fy :%!autopep8 -<CR>
+nnoremap <silent> <Leader>fy :%!autopep8 -<CR>
 
 "For autoformatting a file using par with a width of 79 characters"
 set formatprg="par 79"
@@ -186,12 +186,12 @@ nnoremap <Leader>fa ggVGgq
 nnoremap <Leader>fp mzvapgq`z
 
 "For removing trailing spaces"
-nnoremap <Leader>fs :%s/\s\+$//g<CR>
+nnoremap <silent> <Leader>fs :%s/\s\+$//g<CR>
 
 "For spellcheck"
-nnoremap <Leader>ss
+nnoremap <silent> <Leader>ss
 			\ :setlocal spell spelllang=en_gb<CR>
-nnoremap <Leader>sa
+nnoremap <silent> <Leader>sa
 			\ :setlocal nospell<CR>
 
 "For exceeding 80 characters in a line"
