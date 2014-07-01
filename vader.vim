@@ -68,6 +68,8 @@ hi link texDelimiter     Operator
 hi link texRefZone       String
 hi link texSectionName   String
 hi link texInputFile     String
+hi link texMathZoneA     String
+hi link texMathZoneE     String
 hi link texMathZoneX     String
 hi link texMathZoneY     String
 hi link texMathSymbol    Special
