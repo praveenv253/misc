@@ -80,6 +80,10 @@ inoremap <silent> <Down> <C-o>gj
 nnoremap <silent> <C-Left> b
 nnoremap <silent> <C-Right> w
 
+"Make H and L act like Home and End"
+nnoremap H ^
+nnoremap L $
+
 "For when you forget to open a file with sudo"
 noremap <Leader>ww :w !sudo tee % >/dev/null<CR>
 
