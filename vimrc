@@ -84,6 +84,13 @@ nnoremap <silent> <C-Right> w
 nnoremap H ^
 nnoremap L $
 
+"For swapping parameters in a comma-separated list with Alt + Left or Right"
+"Note: We use nmap and imap because we *want* the redefined versions"
+nmap <silent> <M-Left> <,
+nmap <silent> <M-Right> >,
+imap <silent> <M-Left> <C-o><,
+imap <silent> <M-Right> <C-o>>,
+
 "For when you forget to open a file with sudo"
 noremap <Leader>ww :w !sudo tee % >/dev/null<CR>
 
