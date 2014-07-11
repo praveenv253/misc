@@ -1,4 +1,5 @@
 "Invoke pathogen for plugins"
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 "Line numbers"
