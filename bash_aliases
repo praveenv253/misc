@@ -53,6 +53,12 @@ e() {
 	okular "$@" > /dev/null 2>&1 &
 }
 
+# Alias for opening lyx
+# Don't litter the terminal with arbitrary errors and debug information.
+lyx() {
+	/usr/bin/lyx "$@" > /dev/null 2>&1 &
+}
+
 # Short alias for graphical editor
 # Use -p to open multiple files in different tabs of the same gvim instance.
 # Also, get rid of all those unwanted error messages that we can't decipher,
