@@ -1,42 +1,48 @@
-# Programs that are a must-install when reinstalling my computer:
+# List of programs that are a must-install when reinstalling my OS
+# Packages can be auto-installed using install.sh
 
+# How to use this file:
+# - Only package names that are not preceded by whitespace are considered to be
+#   installation candidates for apt.
+# - For other package types, the command to be used for installation must be
+#   supplied. For example: TODO
+#       python-pip  % pip install
+#           pep8
+#           autopep8
+
+# Programming tools
 g++
-ipython  # With ipython config. loggrep for this.
 git
-vim
-	vim-gnome	# This is for the gnome2 desktop environment. Ubuntu will
-				# already have the dependencies installed.
-	pathogen
-	nerdtree
-	vim-nerdtree-tabs
-	nerdcommenter
-	gundo
-	vim-fugitive
-	vim-powerline (along with fontpatching)
-	upAndDown.vim (from own repo)
-	after/ftplugin for html and python
+ipython     # With ipython config. loggrep for this.
+vim-gnome   # This is for the gnome2 desktop environment. Ubuntu will already
+            # have the dependencies installed.
 python-numpy
 python-scipy
 python-matplotlib
-python-pip
+python-pip  % pip install
 	pep8
 	autopep8
-artha
+python3
+python3-numpy
+python3-scipy
+python3-matplotlib
 valgrind
-trash-cli	# Install from source (github). As of now, apt-get is very stale.
+
+# Writing and editing tools
+artha
 lyx
-astyle		# Formatting C and C++ code.
-par			# Formatting text paragraphs and comments.
+astyle      # Formatting C and C++ code.
+par         # Formatting text paragraphs and comments.
 
-gimp
-stellarium
-vlc
-
+# Networking and web
 openssh-server
 apache
 mysql-server
 php5
 phpmyadmin
 
-subversion
-mercurial
+# Misc
+gimp
+stellarium
+vlc
+#trash-cli   # Install from source (github). As of now, apt-get is very stale.
