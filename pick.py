@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from random import choice
 
@@ -23,16 +23,16 @@ while(1):
     if first_letter == ' ' or first_letter == '#':
         continue
     word = random_line.split('-')[0].strip()
-    print word,
+    print(word, end=' ')
     try:
-        char = raw_input()
+        char = input()
     except EOFError:
         break
     else:
         if char != '':
             try:
-                print random_line.split('-', 1)[1]
+                print(random_line.split('-', 1)[1])
             except IndexError:
-                print 'None'
+                print('None')
         continue
 

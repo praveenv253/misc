@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Program to display ASCII colours and their colour codes on the terminal.
@@ -16,37 +16,36 @@ if __name__ == '__main__':
     bg = '\033[48;5;'
 
     for i in range(0, 8):
-        n = str(string.zfill(i, 3))
+        n = str(i).zfill(3)
         fgstr = fg + n + 'm' + n
         bgstr = bg + n + 'm' 'XXX'
-        print fgstr, bgstr, '\033[0m',
+        print(fgstr + ' ' + bgstr + '\033[0m', end=' ')
 
-    print
+    print()
 
     for i in range(8, 16):
-        n = str(string.zfill(i, 3))
+        n = str(i).zfill(3)
         fgstr = fg + n + 'm' + n
         bgstr = bg + n + 'm' 'XXX'
-        print fgstr, bgstr, '\033[0m',
+        print(fgstr + ' ' + bgstr + '\033[0m', end=' ')
 
-    print
-    print
+    print()
+    print()
 
     for i in range(16, 232, 36):
         for j in range(0, 36, 6):
             for k in range(0, 6):
-                n = str(string.zfill(i+j+k, 3))
+                n = str(i + j + k).zfill(3)
                 fgstr = fg + n + 'm' + n
                 bgstr = bg + n + 'm' 'XXX'
-                print fgstr, bgstr, '\033[0m',
-            print
-        print
+                print(fgstr + ' ' + bgstr + '\033[0m', end=' ')
+            print()
+        print()
 
     for i in range(232, 256, 6):
         for j in range(0, 6):
-            n = str(string.zfill(i+j, 3))
+            n = str(i + j).zfill(3)
             fgstr = fg + n + 'm' + n
             bgstr = bg + n + 'm' 'XXX'
-            print fgstr, bgstr, '\033[0m',
-        print
-
+            print(fgstr + ' ' + bgstr + '\033[0m', end=' ')
+        print()

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 
@@ -10,7 +10,7 @@ try:
 except IOError:
     sys.exit('Error. File "%s" could not be opened.' % sys.argv[1])
 
-header = '''
+header = """
 #LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \\lyxformat 345
 \\begin_document
@@ -49,27 +49,27 @@ header = '''
 \\paperpagestyle default
 \\tracking_changes false
 \\output_changes false
-\\author "" 
+\\author ""
 \\end_header
 
 \\begin_body
-'''
+"""
 
-footer = '''
+footer = """
 \\end_body
 \\end_document
-'''
+"""
 
-print header
-print '\\begin_layout Scrap'
-print '<<*>>=\n'
-print '\\begin_inset Newline newline'
-print '\\end_inset\n'
+print(header)
+print('\\begin_layout Scrap')
+print('<<*>>=\n')
+print('\\begin_inset Newline newline')
+print('\\end_inset\n')
 
 for line in f:
-    print line.replace('\\', '\n\\backslash\n').replace('<<', '@<<')
-    print '\\begin_inset Newline newline'
-    print '\\end_inset\n'
+    print(line.replace('\\', '\n\\backslash\n').replace('<<', '@<<'))
+    print('\\begin_inset Newline newline')
+    print('\\end_inset\n')
 
-print '@\n\\end_layout'
-print footer
+print('@\n\\end_layout')
+print(footer)

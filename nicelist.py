@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Program to display lists (that contain many nested lists) nicely.
 
@@ -10,15 +10,15 @@ if __name__ == '__main__':
         chars = list(line.replace(' ', ''))
         for char in chars:
             if char == '[':
-                print '\b' + char
+                print('\b' + char)
                 numtabs += 1
-                print numtabs * TAB,
+                print(numtabs * TAB, end=' ')
             elif char == ']':
                 numtabs -= 1
-                print
-                print numtabs * TAB + char,
+                print()
+                print(numtabs * TAB + char, end=' ')
             elif char == ',':
-                print '\b' + char
-                print numtabs * TAB,
+                print('\b' + char)
+                print(numtabs * TAB, end=' ')
             else:
-                print '\b' + char,
+                print('\b' + char, end=' ')
