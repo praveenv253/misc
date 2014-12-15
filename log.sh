@@ -3,7 +3,7 @@
 # This program is a thin wrapper to provide git commit support to the logging
 # program.
 
-LOGBINARY="$HOME/C++Files/log"
+LOGBINARY="$HOME/Programs/misc/log"
 LOGDIR="$HOME/Documents/.logs"
 
 $LOGBINARY $@

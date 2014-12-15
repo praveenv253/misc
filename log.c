@@ -111,6 +111,6 @@ void writelog(int argc, char **argv)
 	system(command);
 	sprintf(command, "cat %s >> %s", logfile, templogfile);
 	system(command);
-	sprintf(command, "mv %s %s", templogfile, logfile, templogfile);
+	sprintf(command, "mv %s %s", templogfile, logfile);
 	system(command);
 }
