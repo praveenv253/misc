@@ -7,3 +7,5 @@
 	editor = vim
 	pager = less -x5,9
 	excludesfile = /home/praveen/.gitignore_global
+[push]
+	default = simple
