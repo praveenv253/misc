@@ -1,0 +1,36 @@
+Remapping keys in Ubuntu 14.04
+------------------------------
+*Specifically, remapping CapsLock to Control and PrintScreen to Menu*
+
+I've made a couple of logs (on 16 Dec 2014) for the former. Read those first.
+
+So now you know how to _use_ the existing xkb modifications in order to perform
+some kinds of key-mappings. But for the case of PrintScreen to Menu, this is an
+unorthodox remap, which is required only by Thinkpad users, so it doesn't exist
+by default in any of the files in /usr/share/X11/xkb/symbols. Which means we'll
+need to create our own!
+
+So, based off of the "ctrl:nocaps" option, I wanted to create a new option for
+"menu:noprsc". To do this, I first created a file called menu in
+/usr/share/X11/xkb/symbols. That file has been replicated here.
+
+But it turns out that this alone is not enough. In order to get xkb to
+understand that you have created a new modification that you want to be able to
+use via "setxkbmap -option", you need to define a new rule. Rules are defined
+in /usr/share/X11/xkb/rules. I didn't know how to create a new rule so I
+guessed. This involved grepping all files in the folder for the phrase
+ctrl:nocaps, to see where and how it was defined. I found that the files
+"base", "base.lst" and "base.xml" have definitions or descriptions of this
+rule. There were also very similar definitions/descriptions in evdev*. So what
+I did was to simply add my own rule, copying the general format. The modified
+versions of these files have also been replicated here.
+
+Changing base* also changes xfree86* and xorg*, since they are symlinked to
+base*. I think this is an important part of making all this work, since I don't
+know which of these - base, evdev, xfree86 or xorg are actually being made use
+of here.
+
+So after doing all this, you can go back to dconf-editor, and in org > gnome >
+desktop > input-sources, you can add 'menu:noprsc' to xkb-options.
+
+And that's it!

@@ -1,0 +1,6 @@
+// Change Print Screen into the Menu key.
+partial modifier_keys 
+xkb_symbols "noprsc" {
+    replace key <PRSC>	{ [ Menu ] };
+};
+
