@@ -105,22 +105,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Add nodejs binaries to path
-export PATH="$PATH:/home/praveen/Programs/cloned_repos/node_modules/.bin"
-
 # Add matlab bin folder to path
-export PATH="$PATH:/usr/local/MATLAB/R2014a/bin"
-
-# Add cuda executables to path
-export PATH="$PATH:/usr/local/cuda-5.0/bin"
-# Add cuda libraries to library path
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-5.0/lib64:/usr/local/cuda-5.0/lib"
-
-# For compiling firefox from source:
-export AUTOCONF=autoconf2.13
-
-# pkg-config for opencv
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig"
+#export PATH="$PATH:/usr/local/MATLAB/R2014a/bin"
 
 # Timestamp the command history. You never know when you'll need it!
 export HISTTIMEFORMAT="%F %T "
