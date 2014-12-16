@@ -37,7 +37,10 @@ par         # Formatting text paragraphs and comments.
 exuberant-ctags
 
 # Utilities
+workrave
 unity-tweak-tool
+compizconfig-settings-manager
+dconf-editor
 colordiff
 gitk
 
