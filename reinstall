@@ -31,8 +31,15 @@ valgrind
 # Writing and editing tools
 artha
 lyx
+okular
 astyle      # Formatting C and C++ code.
 par         # Formatting text paragraphs and comments.
+exuberant-ctags
+
+# Utilities
+unity-tweak-tool
+colordiff
+gitk
 
 # Networking and web
 openssh-server
