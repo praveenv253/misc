@@ -4,7 +4,7 @@
 # program.
 
 LOGBINARY="$HOME/Programs/misc/log"
-LOGDIR="$HOME/Documents/.logs"
+LOGDIR="$HOME/documents/.logs"
 
 $LOGBINARY $@
 
