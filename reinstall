@@ -14,6 +14,9 @@
 g++
 git
 ipython     # With ipython config. loggrep for this.
+ipython-notebook
+ipython3
+ipython3-notebook
 vim-gnome   # This is for the gnome2 desktop environment. Ubuntu will already
             # have the dependencies installed.
 python-numpy
