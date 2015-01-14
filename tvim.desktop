@@ -2,7 +2,7 @@
 	Encoding=UTF-8
 	Name=TVim
 	Comment=Edit files using vim in a terminal
-	Exec=/home/praveen/bin/tvim
+	Exec=/home/praveen/bin/tvim %U
 	Terminal=false
 	Type=Application
 	Icon=/usr/share/pixmaps/vim.svg
