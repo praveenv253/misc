@@ -47,11 +47,18 @@ dl() {
 }
 alias dl..='dl ..'
 
-# Short alias for document reader
+# Short alias for Okular
 # Open with okular, and ensure that the terminal is not littered with arbitrary
 # error lines and incomprehensible pieces of information.
 e() {
 	okular "$@" > /dev/null 2>&1 &
+}
+
+# Short alias for document reader (Evince)
+# Open with okular, and ensure that the terminal is not littered with arbitrary
+# error lines and incomprehensible pieces of information.
+ev() {
+	evince "$@" > /dev/null 2>&1 &
 }
 
 # Alias for opening lyx
