@@ -46,6 +46,7 @@ compizconfig-settings-manager
 dconf-editor
 colordiff
 gitk
+htop
 
 # Networking and web
 openssh-server
