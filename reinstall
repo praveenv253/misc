@@ -47,6 +47,7 @@ dconf-editor
 colordiff
 gitk
 htop
+#z          # Download from github https://github.com/rupa/z/
 
 # Networking and web
 openssh-server
