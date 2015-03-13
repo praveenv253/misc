@@ -60,5 +60,6 @@ phpmyadmin
 gimp
 stellarium
 vlc
+audacious
 audacity
 #trash-cli   # Install from source (github). As of now, apt-get is very stale.
