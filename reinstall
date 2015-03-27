@@ -19,9 +19,14 @@ ipython3
 ipython3-notebook
 vim-gnome   # This is for the gnome2 desktop environment. Ubuntu will already
             # have the dependencies installed.
+valgrind
+
+# Python (sort of under programming tools, but it deserves a section of its own
+# since there are so just many modules to install
 python-numpy
 python-scipy
 python-matplotlib
+python-pyaudio
 python-pip  % pip install
 	pep8
 	autopep8
@@ -29,7 +34,7 @@ python3
 python3-numpy
 python3-scipy
 python3-matplotlib
-valgrind
+python3-pyaudio
 
 # Writing and editing tools
 artha
