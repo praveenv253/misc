@@ -101,7 +101,8 @@ fsff() {
 # Alias for latex -> dvips -> ps2pdf. This is a good substitute for pdflatex,
 # when you want to use packages like pstricks, for instance.
 ldp() {
-	latex "$@.tex"
-	dvips "$@.dvi"
-	ps2pdf -dAutoRotatePages=/None "$@.ps"
+	fname=$(echo "$@" | sed 's/\.tex$//')
+	latex "${fname}.tex"
+	dvips "${fname}.dvi"
+	ps2pdf -dAutoRotatePages=/None "${fname}.ps"
 }
