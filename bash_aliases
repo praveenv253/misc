@@ -106,3 +106,9 @@ ldp() {
 	dvips "${fname}.dvi"
 	ps2pdf -dAutoRotatePages=/None "${fname}.ps"
 }
+
+q() {
+	echo -n 'Exit? y/[n]: '
+	read response
+	[[ $response == "y" ]] && exit
+}
