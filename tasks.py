@@ -6,7 +6,7 @@ import tempfile
 from subprocess import call
 
 HOME_DIR = os.environ['HOME']
-TASKFILE = os.path.join(HOME_DIR, 'Documents', '.taskfile')
+TASKFILE = os.path.join(HOME_DIR, 'documents', '.taskfile')
 EDITOR = os.environ.get('EDITOR', 'vim')
 
 # Show usage help
