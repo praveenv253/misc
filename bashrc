@@ -116,3 +116,5 @@ export HISTTIMEFORMAT="%F %T "
 
 # Ignore these file extensions when autocompleting file names.
 export FIGNORE=".o:~:.swp"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
