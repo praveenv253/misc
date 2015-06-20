@@ -1,3 +1,4 @@
+# vim: set ft=gitconfig :
 [user]
 	name = Praveen Venkatesh
 	email = praveenv253@gmail.com
@@ -8,4 +9,4 @@
 	pager = less -x5,9
 	excludesfile = /home/praveen/.gitignore_global
 [push]
-	default = simple
+	default = simple  # git v1.7.11 onwards. Remove for older versions.
