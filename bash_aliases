@@ -107,6 +107,13 @@ ldp() {
 	ps2pdf -dAutoRotatePages=/None "${fname}.ps"
 }
 
+# Alias for pdf2ps -> ps2eps.
+pdf2eps() {
+	fname=$(echo "$@" | sed 's/\.pdf$//')
+	pdf2ps "${fname}.pdf"
+	ps2eps "${fname}.ps"
+}
+
 q() {
 	echo -n 'Exit? y/[n]: '
 	read response
