@@ -23,17 +23,14 @@ valgrind
 
 # Python (sort of under programming tools, but it deserves a section of its own
 # since there are so just many modules to install
-python-numpy
-python-scipy
-python-matplotlib
-python-pyaudio
-python-pip  % pip install
-	pep8
-	autopep8
 python3
-python3-numpy
-python3-scipy
-python3-matplotlib
+#python-pip  % pip install  # Should have pip already, starting v2.7.9 and v3.4
+#    numpy
+#    matplotlib
+#    scipy
+#    pep8
+#    autopep8
+python-pyaudio
 python3-pyaudio
 
 # Writing and editing tools
