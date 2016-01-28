@@ -7,3 +7,6 @@
 "\e[5D": backward-word
 "\e\e[C": forward-word
 "\e\e[D": backward-word
+
+# Show a slash when tab-completing symlinked directories
+set mark-symlinked-directories on
