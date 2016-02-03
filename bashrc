@@ -105,9 +105,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Source z.sh
-. ~/Programs/repos/z/z.sh
-
 # Add matlab bin folder to path
 export PATH="$PATH:/usr/local/MATLAB/R2014b/bin"
 
