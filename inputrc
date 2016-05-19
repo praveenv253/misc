@@ -10,3 +10,7 @@
 
 # Show a slash when tab-completing symlinked directories
 set mark-symlinked-directories on
+
+# Prevent bash from permanently editing history entries when you use the
+# up-arrow to go up to an old command and then edit it.
+set revert-all-at-newline on
