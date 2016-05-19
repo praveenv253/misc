@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=mplOpenFig
+Comment=Open pickled Matplotlib figures
+Exec=/home/praveen/bin/mpl_open_fig.py %U
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/python3.xpm
+Categories=Utility;
+StartupNotify=true
+MimeType=image/mplfig;
+NoDisplay=true
