@@ -122,8 +122,9 @@ q() {
 }
 
 # Alias for which, as suggested by the man page
-which ()
+system_which=`which which`
+which()
 {
-	(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+	(alias; declare -f) | "$system_which" --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
 export -f which
