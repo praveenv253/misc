@@ -114,8 +114,16 @@ pdf2eps() {
 	ps2eps "${fname}.ps"
 }
 
+# Exit the terminal
 q() {
 	echo -n 'Exit? y/[n]: '
 	read response
 	[[ $response == "y" ]] && exit
 }
+
+# Alias for which, as suggested by the man page
+which ()
+{
+	(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+export -f which
