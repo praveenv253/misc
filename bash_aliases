@@ -1,9 +1,9 @@
 # vim: set filetype=sh :
 
 # Search file contents, with regex
-alias sfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 grep --color=always -H -e'
+alias sfc='find . -type f -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 grep --color=always -H -e'
 # Search file contents, raw string
-alias fsfc='find . -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 fgrep --color=always -H'
+alias fsfc='find . -type f -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-base$" | xargs -0 fgrep --color=always -H'
 
 # Convenience shortcuts
 alias die='sudo shutdown -h now'
