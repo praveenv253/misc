@@ -3,7 +3,7 @@
 # Start vim in a terminal! I'd rather use the cterm vim than gvim.
 # Set the working directory as the directory in which the file is present.
 wd=$(dirname "$1")
-gnome-terminal -e "vim \"$1\"" --working-directory="$wd"
+env TERM=xterm-256color-italic gnome-terminal -e "vim \"$1\"" --working-directory="$wd"
 
 # In order to make all this work, it is also necessary to create a .desktop
 # file. This file must be placed in .local/share/applications/. There is
