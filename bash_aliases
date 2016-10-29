@@ -25,6 +25,7 @@ alias mkdir='mkdir -p'
 alias tp='trash-put'		# Requires installation of trash-cli
 alias j='jobs -pl'
 alias gitl='gitk --all'		# Requires git and gitk
+alias sb='xbacklight -set'  # Requires xbacklight
 
 # Safety nets
 alias mv='mv -i'
@@ -35,7 +36,6 @@ alias ln='ln -i'
 alias logd='log -d | less'
 alias loggrep='log -d | grep -1 --color=always'
 
-alias iit='cd /home/praveen/Documents/IIT/current'
 alias ipaddr="ifconfig eth0 | grep 'inet addr' | sed 's/[ \t]*inet addr:\([0-9]\{0,3\}\.[0-9]\{0,3\}\.[0-9]\{0,3\}\.[0-9]\{0,3\}\).*/\1/'"
 
 ## Function based aliases ##

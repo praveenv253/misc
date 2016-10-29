@@ -49,6 +49,7 @@ dconf-editor
 colordiff
 gitk
 htop
+xbacklight
 #which       # Install from source (https://carlowood.github.io/which/)
 
 # Networking and web
