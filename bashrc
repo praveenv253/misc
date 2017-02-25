@@ -107,7 +107,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Add matlab bin folder to path
-export PATH="$PATH:/usr/local/MATLAB/R2014b/bin"
+export PATH="$PATH:/usr/local/MATLAB/R2016b/bin"
 
 # Timestamp the command history. You never know when you'll need it!
 export HISTTIMEFORMAT="%F %T "
