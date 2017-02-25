@@ -3,7 +3,7 @@
 from time import strptime
 
 if __name__ == '__main__':
-    logfile = '/home/praveen/documents/.logs/public-logs'
+    logfile = '/home/praveen/documents/.logs/logfile'
     f = open(logfile, 'r')
     data = f.read()
     f.close()
@@ -24,7 +24,7 @@ if __name__ == '__main__':
         month = strptime(textmonth, '%b').tm_mon
         yyyymmdd = year + '-' + str(month).zfill(2) + '-' + date
         timezone = timezone[3:]
-        filename = yyyymmdd + '-log-message.html'
+        filename = yyyymmdd + '-log-message.markdown'
 
         # Parse message text for tags and blog text
         tags = ['log message', ]
