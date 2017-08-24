@@ -14,6 +14,9 @@ if __name__ == '__main__':
     # Folder to put all the posts in
     dest_dir = '/home/praveen/log-posts/'
 
+    ymd_prev = None
+    sameday_msg_index = 0
+
     for message in log_messages:
         print(message)
         (metadata, message_text) = message.split('\n')
@@ -24,7 +27,12 @@ if __name__ == '__main__':
         month = strptime(textmonth, '%b').tm_mon
         yyyymmdd = year + '-' + str(month).zfill(2) + '-' + date
         timezone = timezone[3:]
-        filename = yyyymmdd + '-log-message.markdown'
+        if yyyymmdd == ymd_prev:
+            sameday_msg_index += 1
+        else:
+            sameday_msg_index = 1
+            ymd_prev = yyyymmdd
+        filename = yyyymmdd + ('-log-message-%d.md' % sameday_msg_index)
 
         # Parse message text for tags and blog text
         tags = ['log message', ]
