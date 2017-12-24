@@ -1,7 +1,2 @@
 # Ignore vim's swap files.
 *.swp
-
-# Ignore python2's pyc files
-*.pyc
-# Ignore python3's cached files
-__pycache__/*
