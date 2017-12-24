@@ -34,3 +34,18 @@ So after doing all this, you can go back to dconf-editor, and in org > gnome >
 desktop > input-sources, you can add 'menu:noprsc' to xkb-options.
 
 And that's it!
+
+---
+
+Update: 24 Dec 2017
+
+I just found a blog post by someone who seems to have gone through this exact
+same process: https://realh.co.uk/wp/linux-keymap-hacking/
+There's not a whole lot more information, though. Looks like everything just
+has to be done by trial-and-error.
+
+There is, however, this U&L answer which explains a lot more:
+https://unix.stackexchange.com/a/215062/120258
+
+Also it seems that changing just evdev and evdev.xml under rules is sufficient.
+There's no need to modify the base* files.
