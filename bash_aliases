@@ -9,7 +9,7 @@ alias fsfc='find . -type f -print0 | grep -zZ -v "\.git" | grep -zZ -v ".*\.svn-
 alias die='sudo shutdown -h now'
 alias phoenix='sudo shutdown -r now'
 alias back='cd -'
-alias n='nautilus .'
+alias n='nautilus . >/dev/null 2>&1 &'
 alias du='du -h'
 alias cd..='cd ..'
 alias df='df -h'
@@ -128,3 +128,8 @@ function which
 	(alias; declare -f) | "$system_which" --tty-only --read-alias --read-functions --show-tilde --show-dot $@
 }
 export -f which
+
+# Alias for redshift
+function r() {
+	redshift -O 5500 -b "$1":"$1"
+}

@@ -113,6 +113,9 @@ export PATH="$PATH:/usr/local/MATLAB/R2016b/bin"
 export HISTTIMEFORMAT="%F %T "
 
 # Ignore these file extensions when autocompleting file names.
-export FIGNORE=".o:~:.swp"
+export FIGNORE=".o:~"
+
+# Add /usr/local/lib/.../site-packages to python path
+export PYTHONPATH="$PYTHONPATH:/usr/local/lib/python3.6/site-packages/"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
