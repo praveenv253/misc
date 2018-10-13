@@ -20,6 +20,7 @@ if __name__ == '__main__':
     data = data[:-1]
     log_messages = data.split('\n\n')
 
+    yaml_output = ''
     for message in log_messages:
         (metadata, message_text) = message.split('\n')
 
@@ -29,7 +30,6 @@ if __name__ == '__main__':
         month = strptime(textmonth, '%b').tm_mon
         yyyymmdd = year + '-' + str(month).zfill(2) + '-' + date
         timezone = timezone[3:]
-        timezone = timezone[:3] + ':' + timezone[3:]
         title = 'Log message'
 
         # Parse message text for tags and blog text
@@ -39,8 +39,10 @@ if __name__ == '__main__':
             tags.append(tag[1:])
             message_text = message_text.strip()
 
-        loginfo = [{'time': yyyymmdd + ' ' + time + timezone,
+        loginfo = [{'time': yyyymmdd + ' ' + time + ' ' + timezone,
                     'title': title,
                     'message': message_text,
                     'tags': tags},]
-        print(yaml.dump(loginfo, default_flow_style=False), end='')
+        yaml_output = yaml.dump(loginfo, default_flow_style=False) + yaml_output
+
+    print(yaml_output, end='')
