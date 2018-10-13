@@ -34,6 +34,7 @@ alias ln='ln -i'
 
 # Aliases for the logger
 alias logd='log -d | less'
+alias blog='log -b'
 alias loggrep='log -d | grep -1 --color=always'
 
 alias ipaddr="ifconfig eth0 | grep 'inet addr' | sed 's/[ \t]*inet addr:\([0-9]\{0,3\}\.[0-9]\{0,3\}\.[0-9]\{0,3\}\.[0-9]\{0,3\}\).*/\1/'"

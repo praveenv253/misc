@@ -12,7 +12,7 @@ import time
 import yaml
 
 HOME_DIR = os.environ['HOME']
-LOGFILE = os.path.join(HOME_DIR, 'Documents', '.logs', 'logfile')
+LOGFILE = os.path.join(HOME_DIR, 'documents', '.logs', 'logfile.yml')
 EDITOR = os.environ.get('EDITOR', 'vim')
 
 
@@ -50,6 +50,7 @@ if __name__ == '__main__':
 
     gmtoffset = time.localtime().tm_gmtoff
     now = dt.datetime.now(dt.timezone(dt.timedelta(seconds=gmtoffset)))
+    formatted_time = now.strftime('%Y-%m-%d %H:%M:%S %z')
 
     # Parse message text for tags and blog text
     tags = ['log message', ]
@@ -58,7 +59,7 @@ if __name__ == '__main__':
         tags.append(tag[1:])
         message = message.strip()
 
-    loginfo = [{'time': now.isoformat(sep=' ', timespec='seconds'),
+    loginfo = [{'time': formatted_time,
                 'title': args.title,
                 'message': message,
                 'tags': tags},]
@@ -70,7 +71,7 @@ if __name__ == '__main__':
         filedata = ('---\n'
                     'layout: blog\n'
                     'title: ' + args.title + '\n'
-                    'date: ' + now.isoformat(sep=' ', timespec='seconds') + '\n'
+                    'date: ' + formatted_time + '\n'
                     'day: ' + now.strftime('%A') + '\n'
                     'tags:\n')
         for tag in tags:
@@ -79,15 +80,15 @@ if __name__ == '__main__':
 
         # Generate unique filename
         filename = now.date().isoformat() + '-log-message.md'
-        #filepath = os.path.join(HOME_DIR, 'repos', 'website-jekyll', 'logs',
-        #                        '_posts', filename)
-        filepath = os.path.join(HOME_DIR, filename)
+        filepath = os.path.join(HOME_DIR, 'repos', 'website-jekyll', 'logs',
+                                '_posts', filename)
         sameday_msg_index = 0
         while os.path.isfile(filepath):
             sameday_msg_index += 1
             filename = now.date().isoformat() + ('-log-message-%d.md'
                                                  % sameday_msg_index)
-            filepath = os.path.join(HOME_DIR, filename)
+            filepath = os.path.join(HOME_DIR, 'repos', 'website-jekyll', 'logs',
+                                    '_posts', filename)
 
         # Write file
         with open(filepath, 'w') as f:

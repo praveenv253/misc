@@ -3,10 +3,10 @@
 # This program is a thin wrapper to provide git commit support to the logging
 # program.
 
-LOGBINARY="$HOME/Programs/misc/log"
+LOGBINARY="$HOME/repos/misc/log.py"
 LOGDIR="$HOME/documents/.logs"
 
-$LOGBINARY $@
+$LOGBINARY "$@"
 
 cd $LOGDIR
 
