@@ -7,6 +7,9 @@ import os
 import tempfile
 from subprocess import call
 import argparse
+import datetime as dt
+import time
+import yaml
 
 HOME_DIR = os.environ['HOME']
 LOGFILE = os.path.join(HOME_DIR, 'Documents', '.logs', 'logfile')
@@ -18,6 +21,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Create a log message')
     parser.add_argument('-d', '--display', dest='disp', action='store_true',
                         help='List all log messages')
+    parser.add_argument('-b', '--blog', dest='blog', action='store_true',
+                        help='Also create a blog post under logs')
     parser.add_argument('-t', '--title', dest='title', default='Log message',
                         metavar='<title>', help='Title of the log message')
     parser.add_argument('message', nargs=argparse.REMAINDER,
@@ -41,16 +46,49 @@ if __name__ == '__main__':
 
     if not message.strip():
         print('Empty message. Not writing anything.')
-        sys.exit()
+        sys.exit(0)
 
-    import datetime as dt
-    import time
     gmtoffset = time.localtime().tm_gmtoff
     now = dt.datetime.now(dt.timezone(dt.timedelta(seconds=gmtoffset)))
 
-    import yaml
+    # Parse message text for tags and blog text
+    tags = ['log message', ]
+    while message[0] == '[':
+        [tag, message] = message.split(']', 1)
+        tags.append(tag[1:])
+        message = message.strip()
+
     loginfo = [{'time': now.isoformat(sep=' ', timespec='seconds'),
                 'title': args.title,
-                'message': message},]
+                'message': message,
+                'tags': tags},]
     with open(LOGFILE, 'a') as f:
         f.write(yaml.dump(loginfo, default_flow_style=False))
+
+    if args.blog:
+        # Construct blog post
+        filedata = ('---\n'
+                    'layout: blog\n'
+                    'title: ' + args.title + '\n'
+                    'date: ' + now.isoformat(sep=' ', timespec='seconds') + '\n'
+                    'day: ' + now.strftime('%A') + '\n'
+                    'tags:\n')
+        for tag in tags:
+            filedata += '  - ' + tag + '\n'
+        filedata += '---\n\n' + message
+
+        # Generate unique filename
+        filename = now.date().isoformat() + '-log-message.md'
+        #filepath = os.path.join(HOME_DIR, 'repos', 'website-jekyll', 'logs',
+        #                        '_posts', filename)
+        filepath = os.path.join(HOME_DIR, filename)
+        sameday_msg_index = 0
+        while os.path.isfile(filepath):
+            sameday_msg_index += 1
+            filename = now.date().isoformat() + ('-log-message-%d.md'
+                                                 % sameday_msg_index)
+            filepath = os.path.join(HOME_DIR, filename)
+
+        # Write file
+        with open(filepath, 'w') as f:
+            f.write(filedata)

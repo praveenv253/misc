@@ -37,8 +37,9 @@ if __name__ == '__main__':
         # Parse message text for tags and blog text
         tags = ['log message', ]
         while message_text[0] == '[':
-            [tag, message_text] = message_text.split('] ', 1)
+            [tag, message_text] = message_text.split(']', 1)
             tags.append(tag[1:])
+            message_text = message_text.strip()
 
         # Construct blog post
         filedata = ('---\n'
