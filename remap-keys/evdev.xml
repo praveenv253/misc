@@ -5982,8 +5982,9 @@
         </configItem>
       </option>
     </group>
+
+    <!-- Include option to remap print-screen to the menu -->
     <group allowMultipleSelection="true">
-      
       <configItem>
         <name>menu</name>
         <description>Menu key position</description>
@@ -5995,8 +5996,8 @@
         </configItem>
       </option>
 	</group>
+
     <group allowMultipleSelection="true">
-      
       <configItem>
         <name>ctrl</name>
         <description>Ctrl key position</description>

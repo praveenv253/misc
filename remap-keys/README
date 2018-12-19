@@ -49,3 +49,17 @@ https://unix.stackexchange.com/a/215062/120258
 
 Also it seems that changing just evdev and evdev.xml under rules is sufficient.
 There's no need to modify the base* files.
+
+---
+
+Update: 19 Dec 2018
+
+The above still works on Ubuntu 18.04 with Gnome. In fact, certain things
+become simpler. Simply do the following:
+1. Copy the menu file in this directory to /usr/share/X11/xkb/symbols
+2. Then, edit evdev and evdev.xml in /usr/share/X11/xkb/rules, to include the
+   lines corresponding to menu:noprsc
+3. Open gnome-tweak-tool. Under Keyboard & Mouse -> Additional Layout Options,
+   there should now be a new option called "Menu key position". Simply flick
+   the switch
+That's it!
