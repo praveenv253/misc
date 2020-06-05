@@ -132,5 +132,5 @@ export -f which
 
 # Alias for redshift
 function r() {
-	redshift -O 5500 -b "$1":"$1"
+	redshift -O 6500 -b "$1":"$1"
 }
