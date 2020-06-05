@@ -66,3 +66,13 @@ vlc
 audacious
 audacity
 #trash-cli   # Install from source (github). As of now, apt-get is very stale.
+
+# Gnome shell extensions (to be installed separately)
+# Install chrome-gnome-shell (below) as well as the Gnome Shell integration
+# add-on for Firefox:
+# https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/
+chrome-gnome-shell
+# List of extensions to add
+# - Workspace grid: https://extensions.gnome.org/extension/484/workspace-grid/
+# - Pixel saver: https://extensions.gnome.org/extension/723/pixel-saver/
+# - Better OSD: https://extensions.gnome.org/extension/1345/better-osd/
