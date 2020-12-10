@@ -4,9 +4,9 @@
 MISC_REPO=$(pwd)
 
 # Install packages from reinstall
-REINSTALL_FILE="$MISC_REPO/reinstall"
-PACKAGES=$(cat $REINSTALL_FILE | sed 's/[#%].*$//' | sed 's/^\s.*//')
-sudo apt-get install $PACKAGES
+#REINSTALL_FILE="$MISC_REPO/reinstall"
+#PACKAGES=$(cat $REINSTALL_FILE | sed 's/[#%].*$//' | sed 's/^\s.*//')
+#sudo apt-get install $PACKAGES
 
 # Install dotvim and vim-bundle
 # ssh keys must be set up for this to work
@@ -19,6 +19,8 @@ git submodule init
 git submodule update
 
 # Install the patched font
+# This is still needed after install powerline fonts for some reason;
+# also, update the default monospace font that the terminal uses
 PATCHED_FONT_FILE="DejaVuSansMono-Powerline.ttf"
 mkdir "$HOME/.fonts"
 cp "$HOME/.vim/$PATCHED_FONT_FILE" "$HOME/.fonts/"
@@ -30,6 +32,7 @@ ln -s "$MISC_REPO/bash_aliases" .bash_aliases
 ln -s "$MISC_REPO/inputrc" .inputrc
 ln -s "$MISC_REPO/gitconfig" .gitconfig
 ln -s "$MISC_REPO/gitignore_global" .gitignore_global
+ln -s "$MISC_REPO/latexmkrc" .latexmkrc
 mkdir "$HOME/bin"
 cd "$HOME/bin"
 ln -s "$MISC_REPO/tasks.py" tasks
