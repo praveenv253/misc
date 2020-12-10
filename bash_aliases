@@ -26,6 +26,9 @@ alias tp='trash-put'		# Requires installation of trash-cli
 alias j='jobs -pl'
 alias gitl='gitk --all'		# Requires git and gitk
 alias sb='xbacklight -set'  # Requires xbacklight
+alias w='cd ~/Downloads'
+alias d='cd ~/documents'
+alias p='cd ~/papers'
 
 # Safety nets
 alias mv='mv -i'
