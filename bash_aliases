@@ -135,5 +135,9 @@ export -f which
 
 # Alias for redshift
 function r() {
-	redshift -O 6500 -b "$1":"$1"
+	if [ "$1" = "x" -o "$1" = "-x" ]; then
+		redshift -x
+	else
+		redshift -O 6500 -b "$1":"$1"
+	fi
 }
