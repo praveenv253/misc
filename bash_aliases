@@ -138,6 +138,7 @@ function r() {
 	if [ "$1" = "x" -o "$1" = "-x" ]; then
 		redshift -x
 	else
+		redshift -x
 		redshift -O 6500 -b "$1":"$1"
 	fi
 }
