@@ -11,31 +11,32 @@
 #           autopep8
 
 # Programming tools
-g++
 git
-ipython     # With ipython config. loggrep for this.
-ipython-notebook
-ipython3
-ipython3-notebook
-vim-gnome   # This is for the gnome2 desktop environment. Ubuntu will already
+g++
+#ipython     # With ipython config. loggrep for this.
+#ipython-notebook
+#ipython3
+#ipython3-notebook
+vim-gtk3    # This is for the gnome2 desktop environment. Ubuntu will already
             # have the dependencies installed.
 valgrind
 
 # Python (sort of under programming tools, but it deserves a section of its own
 # since there are so just many modules to install
-python3
+#python3
 #python-pip  % pip install  # Should have pip already, starting v2.7.9 and v3.4
 #    numpy
 #    matplotlib
 #    scipy
 #    pep8
 #    autopep8
-python-pyaudio
-python3-pyaudio
+#python-pyaudio
+#python3-pyaudio
 
 # Writing and editing tools
 artha
 lyx
+texlive-fonts-extra
 okular
 astyle      # Formatting C and C++ code.
 par         # Formatting text paragraphs and comments.
@@ -43,21 +44,21 @@ exuberant-ctags
 
 # Utilities
 workrave
-unity-tweak-tool
-compizconfig-settings-manager
-dconf-editor
+gnome-tweak-tool
+#compizconfig-settings-manager
+#dconf-editor
 colordiff
 gitk
 htop
-xbacklight
+redshift
 #which       # Install from source (https://carlowood.github.io/which/)
 
 # Networking and web
-openssh-server
-apache
-mysql-server
-php5
-phpmyadmin
+#openssh-server
+#apache
+#mysql-server
+#php5
+#phpmyadmin
 
 # Misc
 gimp
