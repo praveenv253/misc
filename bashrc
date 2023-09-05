@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # Add matlab bin folder to path
-export PATH="$PATH:/usr/local/MATLAB/R2018b/bin"
+#export PATH="$PATH:/usr/local/MATLAB/R2018b/bin"
 
 # Timestamp the command history. You never know when you'll need it!
 export HISTTIMEFORMAT="%F %T "
@@ -126,7 +126,8 @@ export FIGNORE=".o:~"
 #export PYTHONPATH="$PYTHONPATH:/usr/local/lib/python3.6/site-packages/"
 
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /etc/profile.d/rvm.sh
 
 # added by Anaconda3 5.3.1 installer
 # >>> conda init >>>
