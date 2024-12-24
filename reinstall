@@ -12,7 +12,7 @@
 
 # Programming tools
 git
-g++
+build-essential
 #ipython     # With ipython config. loggrep for this.
 #ipython-notebook
 #ipython3
@@ -44,7 +44,8 @@ exuberant-ctags
 
 # Utilities
 workrave
-gnome-tweak-tool
+gnome-tweaks
+lm-sensors
 #compizconfig-settings-manager
 #dconf-editor
 colordiff
@@ -73,6 +74,7 @@ audacity
 # add-on for Firefox:
 # https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/
 chrome-gnome-shell
+gnome-shell-extension-prefs
 # List of extensions to add
 # - Workspace grid: https://extensions.gnome.org/extension/484/workspace-grid/
 # - Pixel saver: https://extensions.gnome.org/extension/723/pixel-saver/
